@@ -6,7 +6,7 @@ export const Header = () => {
     <header>
       <nav className="mx-auto flex max-w-5xl py-4 justify-between">
         <Image
-          src={"/images/website_logo.png"}
+          src={"/website_logo.png"}
           alt="website logo"
           width={60}
           height={60}
