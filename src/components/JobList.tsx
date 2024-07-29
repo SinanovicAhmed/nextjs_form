@@ -3,6 +3,7 @@ import { Prisma } from "@prisma/client";
 import React from "react";
 import JobListCard from "./JobListCard";
 import prisma from "@/lib/prisma";
+import Link from "next/link";
 
 interface JobListProps {
   filterValues: JobFilterValues;
@@ -41,11 +42,15 @@ const JobList = async ({
   });
 
   return (
-    <div className="space-y-4 grow">
+    <div className="grow space-y-4">
       {jobs.length > 0 ? (
-        jobs.map((job) => <JobListCard key={job.id} job={job} />)
+        jobs.map((job) => (
+          <Link href={`/jobs/${job.slug}`} key={job.id}>
+            <JobListCard job={job} />
+          </Link>
+        ))
       ) : (
-        <p className="text-muted-foreground text-center text-sm">
+        <p className="text-center text-sm text-muted-foreground">
           No job results. You can try with different filters.
         </p>
       )}
