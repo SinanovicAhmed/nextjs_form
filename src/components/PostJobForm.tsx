@@ -18,7 +18,7 @@ import FormSubmitButton from "./ui/formSubmitButton";
 import { Label } from "@radix-ui/react-label";
 import TextEditor from "./TextEditor";
 import { draftToMarkdown } from "markdown-draft-js";
-import createJobPost from "@/app/jobs/new/action";
+import createJobPost from "@/app/(user)/jobs/new/action";
 import { redirect } from "next/navigation";
 
 const PostJobForm = () => {
