@@ -2,6 +2,7 @@ import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { formatDistanceToNowStrict } from "date-fns";
 import { JobFilterValues } from "./validation";
+import { nanoid } from "nanoid";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -36,3 +37,12 @@ export const generatePageHeader = ({
 
   return `${firstPhrase} ${secondPhrase}`;
 };
+
+export function createSlug(str: string) {
+  const slug = str
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "");
+
+  return `${slug}-${nanoid(10)}`;
+}

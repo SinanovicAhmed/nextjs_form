@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header>
-      <nav className="mx-auto flex max-w-5xl justify-between px-2 py-4">
+    <header className="shadow">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between p-2">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src={"/website_logo.png"}

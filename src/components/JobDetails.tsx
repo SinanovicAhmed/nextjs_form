@@ -7,7 +7,7 @@ import Markdown from "./Markdown";
 
 const JobDetails = ({ job }: { job: Job }) => {
   return (
-    <section>
+    <section className="w-full">
       <div className="mb-6 flex justify-between border-b-2 py-2">
         <div className="flex flex-col gap-2">
           <div>
@@ -49,7 +49,13 @@ const JobDetails = ({ job }: { job: Job }) => {
           />
         )}
       </div>
-      {job.description && <Markdown>{job.description}</Markdown>}
+      {job.description ? (
+        <Markdown>{job.description}</Markdown>
+      ) : (
+        <p className="text-center text-muted-foreground">
+          This job post doesn&#39;t have any description.
+        </p>
+      )}
     </section>
   );
 };

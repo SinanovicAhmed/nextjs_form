@@ -38,7 +38,7 @@ const page = async ({ params: { slug } }: PageProps) => {
   }
 
   return (
-    <main className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-2 py-10">
+    <main className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-2 py-5">
       <JobDetails job={job} />
       <Button asChild>
         <a href={applicationLink}>Apply here</a>

@@ -5,14 +5,16 @@ import { Button } from "./button";
 import React from "react";
 import { Loader2 } from "lucide-react";
 
-const FormSubmitButton = (
-  props: React.ButtonHTMLAttributes<HTMLButtonElement>,
-) => {
+const FormSubmitButton = ({
+  loading,
+  ...props
+}: React.ButtonHTMLAttributes<HTMLButtonElement> & { loading?: boolean }) => {
   const { pending } = useFormStatus();
+
   return (
-    <Button {...props} type="submit" disabled={pending}>
-      <span className="flex gap-2 items-center justify-center">
-        {pending && <Loader2 className="animate-spin" />}
+    <Button {...props} type="submit" disabled={pending || loading}>
+      <span className="flex items-center justify-center gap-2">
+        {(pending || loading) && <Loader2 className="animate-spin" />}
         {props.children}
       </span>
     </Button>
