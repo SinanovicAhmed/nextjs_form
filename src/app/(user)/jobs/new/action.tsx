@@ -2,7 +2,6 @@
 
 import { createSlug } from "@/lib/utils";
 import { jobPostSchema } from "@/lib/validation";
-import { nanoid } from "nanoid";
 import { put } from "@vercel/blob";
 import path from "path";
 import prisma from "@/lib/prisma";
