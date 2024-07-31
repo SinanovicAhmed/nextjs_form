@@ -33,6 +33,7 @@ const JobList = async ({
       type ? { type } : {},
       location ? { location } : {},
       arrangement ? { locationType: arrangement } : {},
+      { approved: true },
     ],
   };
 
@@ -42,7 +43,7 @@ const JobList = async ({
   });
 
   return (
-    <div className="grow space-y-4">
+    <div className="flex grow flex-col gap-4">
       {jobs.length > 0 ? (
         jobs.map((job) => (
           <Link href={`/jobs/${job.slug}`} key={job.id}>

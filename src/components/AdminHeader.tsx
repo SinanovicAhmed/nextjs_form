@@ -1,8 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useClerk } from "@clerk/nextjs";
 
 export const AdminHeader = () => {
+  const { signOut } = useClerk();
+  const router = useRouter();
+
+  const logout = async () => {
+    await signOut();
+    router.push("/");
+  };
+
   return (
     <header className="shadow">
       <nav className="mx-auto flex max-w-5xl items-center justify-between p-2">
@@ -14,7 +26,7 @@ export const AdminHeader = () => {
             height={60}
           />
         </Link>
-        <Button>Log out</Button>
+        <Button onClick={logout}>Log out</Button>
       </nav>
     </header>
   );

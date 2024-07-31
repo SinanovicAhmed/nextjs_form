@@ -9,10 +9,10 @@ interface JobListCardProp {
 
 const JobListCard = ({ job }: JobListCardProp) => {
   return (
-    <article className="flex gap-5 border p-5 hover:bg-muted rounded-sm">
+    <article className="flex gap-5 rounded-sm border p-5 hover:bg-muted">
       <Image
-        className="rounded-lg self-center"
-        src={job.companyLogoUrl || "/images/job_logo_default.png"}
+        className="self-center rounded-lg"
+        src={job.companyLogoUrl || "/job_logo_default.png"}
         alt={`${job.companyName} logo`}
         width={90}
         height={90}
@@ -48,8 +48,8 @@ const JobListCard = ({ job }: JobListCardProp) => {
           </p>
         </div>
       </div>
-      <div className="hidden sm:flex flex-col justify-between items-end text-muted-foreground text-xs">
-        <p className="bg-slate-200 px-2 rounded">{job.type}</p>
+      <div className="hidden flex-col items-end justify-between text-xs text-muted-foreground sm:flex">
+        <p className="rounded bg-slate-200 px-2">{job.type}</p>
         <p className="flex items-center gap-2">
           <Clock size={15} className="shrink-0" />
           {calculateDateGap(job.createdAt)}
