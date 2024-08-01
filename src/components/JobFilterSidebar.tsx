@@ -37,7 +37,7 @@ const JobFilterSidebar = async () => {
     );
 
   return (
-    <aside className="w-full md:w-[260px] md:sticky top-10 h-fit p-5 md:p-2 rounded-md border">
+    <aside className="top-10 h-fit w-full rounded-md border p-5 shadow-md md:sticky md:w-[260px] md:p-2">
       <form action={filterJobs}>
         <div className="space-y-3">
           <div className="space-y-2">

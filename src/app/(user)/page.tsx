@@ -5,7 +5,7 @@ import { JobFilterValues } from "@/lib/validation";
 import { Metadata } from "next";
 
 interface PageProps {
-  searchParams: JobFilterValues;
+  searchParams: JobFilterValues & { page: string };
 }
 
 export const generateMetadata = ({
@@ -17,7 +17,7 @@ export const generateMetadata = ({
 };
 
 export default async function Home({
-  searchParams: { q, location, type, arrangement },
+  searchParams: { q, location, type, arrangement, page },
 }: PageProps) {
   const filterValues: JobFilterValues = { q, location, type, arrangement };
 
@@ -33,7 +33,10 @@ export default async function Home({
       </div>
       <section className="flex flex-col gap-4 md:flex-row">
         <JobFilterSidebar />
-        <JobList filterValues={filterValues} />
+        <JobList
+          filterValues={filterValues}
+          page={page ? parseInt(page) : undefined}
+        />
       </section>
     </main>
   );

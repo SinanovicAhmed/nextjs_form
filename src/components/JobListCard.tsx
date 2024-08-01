@@ -9,7 +9,7 @@ interface JobListCardProp {
 
 const JobListCard = ({ job }: JobListCardProp) => {
   return (
-    <article className="flex gap-5 rounded-sm border p-5 hover:bg-muted">
+    <article className="flex gap-5 rounded-sm border p-5 shadow-md hover:bg-muted">
       <Image
         className="self-center rounded-lg"
         src={job.companyLogoUrl || "/job_logo_default.png"}

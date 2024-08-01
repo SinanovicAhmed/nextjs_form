@@ -43,7 +43,7 @@ const PostJobForm = () => {
   };
 
   return (
-    <div className="rounded-md border p-4">
+    <div className="rounded-md border p-4 shadow-md">
       <Form {...form}>
         <form
           className="space-y-4"
