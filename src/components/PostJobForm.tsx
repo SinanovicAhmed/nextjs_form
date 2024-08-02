@@ -106,7 +106,12 @@ const PostJobForm = () => {
             name="companyLogo"
             render={({ field: { value, ...fieldValues } }) => (
               <FormItem>
-                <FormLabel>Company logo</FormLabel>
+                <FormLabel>
+                  Company logo{" "}
+                  <span className="text-xs text-muted-foreground">
+                    (optional)
+                  </span>
+                </FormLabel>
                 <FormControl>
                   <Input
                     {...fieldValues}
@@ -151,7 +156,12 @@ const PostJobForm = () => {
             name="location"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Office location</FormLabel>
+                <FormLabel>
+                  Office location{" "}
+                  <span className="text-xs text-muted-foreground">
+                    (optional for remote)
+                  </span>
+                </FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -216,7 +226,10 @@ const PostJobForm = () => {
                   className="text-sm font-medium"
                   onClick={() => form.setFocus("description")}
                 >
-                  Description
+                  Description{" "}
+                  <span className="text-xs text-muted-foreground">
+                    (optional)
+                  </span>
                 </Label>
                 <FormControl>
                   <TextEditor

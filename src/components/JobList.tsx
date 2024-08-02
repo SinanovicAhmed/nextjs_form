@@ -53,7 +53,7 @@ const JobList = async ({ filterValues, page = 1 }: JobListProps) => {
   const [jobs, totalResults] = await Promise.all([jobsPromise, countPromise]);
 
   return (
-    <div className="flex grow flex-col gap-4 pb-4">
+    <div className="flex grow flex-col gap-4">
       {jobs.length > 0 ? (
         jobs.map((job) => (
           <Link href={`/jobs/${job.slug}`} key={job.id}>
@@ -65,13 +65,15 @@ const JobList = async ({ filterValues, page = 1 }: JobListProps) => {
           No job results. You can try with different filters.
         </p>
       )}
-      {jobs.length > 0 && (
-        <PaginationBar
-          currentPage={page}
-          totalPages={Math.ceil(totalResults / jobsPerPage)}
-          filterValues={filterValues}
-        />
-      )}
+      <div className="py-6">
+        {jobs.length > 0 && (
+          <PaginationBar
+            currentPage={page}
+            totalPages={Math.ceil(totalResults / jobsPerPage)}
+            filterValues={filterValues}
+          />
+        )}
+      </div>
     </div>
   );
 };
