@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Overview:
+This job application platform is a fun practice project built with Next.js, TypeScript, and TailwindCSS. It lets you browse job listings with easy pagination, view detailed job descriptions, and post new jobs through a zod validated form. The admin dashboard makes it a breeze to approve or delete job postings, keeping everything under control. For security, it uses Clerk for admin authentication, and Prisma ORM handles the database stuff. This project is all about making job searching and posting easy and efficient!
 
-## Getting Started
+## Technologies Used:
+Next.js |
+ TypeScript |
+ TailwindCSS |
+ PostgreSQL |
+ Prisma ORM |
+ Zod |
+ Clerk 
 
-First, run the development server:
+## Images:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Screenshot_2](https://github.com/user-attachments/assets/ef07c0c2-4b49-4e8f-84f0-8428b661b2da)
+![Screenshot_4](https://github.com/user-attachments/assets/d90cea57-1e47-4988-b3c0-f082353e3511)
+![Screenshot_5](https://github.com/user-attachments/assets/8a176e09-9055-4c0c-aacb-9ff76007f6c1)
+![Screenshot_8](https://github.com/user-attachments/assets/09eaf81f-d76f-4539-ac47-f44743ef1e2e)
+![Screenshot_6](https://github.com/user-attachments/assets/bf0d0573-c53c-4894-93c4-f23cacdb8cb1)
+![Screenshot_7](https://github.com/user-attachments/assets/086402fd-4e62-4673-953b-0d6c2a9b5e48)
